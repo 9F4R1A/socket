@@ -5,7 +5,7 @@ int main(){
 
     int SocketFD = createTCPIpv4Socket();
 
-    struct sockaddr_in *address = createIPv4Address("172.217.168.174",80);
+    struct sockaddr_in *address = createIPv4Address("127.0.0.1",2000);
 
     
 
@@ -14,7 +14,7 @@ int main(){
         printf("Connection was successfull\n");
 
     char* message;
-    message = "GET \\ HTTP/1.1\r\nHost:google.con\r\n\r\n";
+    message = "GET \\ HTTP/1.1\r\nHost:google.com\r\n\r\n";
     send(SocketFD,message,strlen(message),0);
 
     char* buffer[1024];

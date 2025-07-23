@@ -6,6 +6,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <malloc.h>
+#include <stdbool.h>
 
 struct Sockaddr_in* createIPv4Address(char *ip, int port);
 
